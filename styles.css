@@ -72,3 +72,16 @@ button:focus-visible{outline:3px solid #9cbf8d;outline-offset:3px}
   .week-grid .day-card {display:block;}
   .week-grid .day-content {display:block;}
 }
+
+/* La tarjeta termina tras la cena. El entrenamiento queda fuera y no estira las otras tarjetas. */
+.week-grid .day-slot{min-width:0;display:flex;flex-direction:column;gap:9px;align-self:start}
+.week-grid .day-slot>.day-card{width:100%;margin:0}
+.week-grid .day-slot>.training-panel{margin:0;align-self:stretch;flex:0 0 auto}
+@media(min-width:760px){
+ .week-grid .day-slot>.day-card{display:grid;grid-template-rows:75px repeat(3,minmax(105px,auto));grid-row:auto;align-self:stretch}
+ .week-grid .day-slot>.day-card .day-content{display:contents}
+ .week-grid .day-slot>.day-card .week-meal{min-height:105px;margin:0 14px;padding:12px 0;align-self:stretch}
+ .week-grid .day-slot>.day-card .free-week{grid-row:span 3;align-self:center}
+ .week-grid .day-slot>.training-panel{align-self:stretch}
+}
+@media(max-width:759px){.week-grid .day-slot>.day-card{display:block}.week-grid .day-slot>.day-card .day-content{display:block}}
