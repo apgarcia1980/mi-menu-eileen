@@ -42,3 +42,33 @@ button:focus-visible{outline:3px solid #9cbf8d;outline-offset:3px}
 .training-panel .meal-actions{gap:7px}
 .training-panel .pill{max-width:100%;white-space:normal;text-align:left}
 @media(max-width:420px){.training-panel{padding:12px}.training-panel .check span{font-size:12px}}
+
+/* Alineación compartida de filas entre las tarjetas de una misma línea.
+   subgrid hace que la altura de cada toma la determine la tarjeta más alta. */
+@media (min-width:760px) {
+  .week-grid { align-items:stretch; }
+  .week-grid .day-card {
+    display:grid;
+    grid-template-rows:subgrid;
+    grid-row:span 5;
+    align-self:stretch;
+  }
+  .week-grid .day-content { display:contents; }
+  .week-grid .day-head { min-height:75px; }
+  .week-grid .week-meal {
+    margin:0 14px;
+    padding:12px 0;
+    min-height:76px;
+    align-self:stretch;
+  }
+  .week-grid .training-panel {
+    align-self:stretch;
+    margin:8px 14px 14px;
+  }
+  .week-grid .free-week {grid-row:span 4;align-self:center;}
+}
+/* Una columna en móvil: las tarjetas conservan alturas naturales. */
+@media (max-width:759px) {
+  .week-grid .day-card {display:block;}
+  .week-grid .day-content {display:block;}
+}
