@@ -34,3 +34,11 @@ button:focus-visible{outline:3px solid #9cbf8d;outline-offset:3px}
 @media(min-width:760px){.app{max-width:1000px;padding:0 30px 120px}.bottom{width:min(940px,calc(100% - 60px))}.week-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sunday-feature{display:grid;grid-template-columns:45% 55%;min-height:335px}.sunday-image{height:100%;min-height:335px}.sunday-copy{padding:30px;align-content:center}}
 @media(min-width:1150px){.app{max-width:1100px}.week-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.bottom{width:min(1040px,calc(100% - 60px))}}
 @media(max-width:420px){.week-meal-label{flex-basis:57px;font-size:10px}.week-meal-detail img{width:49px;height:48px}.week-change{font-size:10px;padding:6px}.week-grid .day-content{padding:8px 11px 13px}.sunday-image{height:185px}.sunday-copy{padding:18px}}
+
+/* Entrenamiento por fecha, de lunes a sábado */
+.training-panel{padding:13px 15px;margin:12px 0 0;background:#f8faf6;border-radius:16px}
+.training-panel .check{padding:6px 0 12px}
+.training-panel .check span{font-size:13px}
+.training-panel .meal-actions{gap:7px}
+.training-panel .pill{max-width:100%;white-space:normal;text-align:left}
+@media(max-width:420px){.training-panel{padding:12px}.training-panel .check span{font-size:12px}}
